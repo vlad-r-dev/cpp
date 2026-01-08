@@ -3,20 +3,34 @@ using namespace std;
 
 int main() {
 
-	int age, exp; // Creating variables
+	int age, exp;
 	char license;
 	
-	cout << "How old are you? : "; // Receiving data from the user
+	const int min_age = 22; //Added default value
+	const int min_exp = 2;
+
+	cout << "How old are you? : ";
 	cin >> age;
+
+	if (age < min_age) {
+		cout << "You are not accepted for the job." << endl;
+		return 0; // Added a return to end the program if there is a mismatch with the requirements.
+	}
 
 	cout << "What work experience do you have? : ";
 	cin >> exp;
 
+	if (exp < min_exp) {
+		cout << "You are not accepted for the job." << endl;
+		return 0;
+	}
+
 	cout << "Do you have a category D driver`s license? : ";
 	cin >> license;
 
-	if (age >= 22 && exp >= 2 && license == 'y') // We create conditions and verify them
+	if (license == 'y')
 		cout << "Greate, you`re hired!" << endl;
 	else
-		cout << "Sorry, you're not right for us" << endl;
+		cout << "Sorry, you're not right for us." << endl;
+	return 0;
 }
