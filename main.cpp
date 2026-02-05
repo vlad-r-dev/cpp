@@ -5,7 +5,7 @@ int main() {
 
 	int age, exp;
 	char license;
-	
+
 	const int min_age = 22; //Added default value
 	const int min_exp = 2;
 
@@ -13,7 +13,7 @@ int main() {
 	cin >> age;
 
 	if (age < min_age) {
-		cout << "You are not accepted for the job." << endl;
+		cout << "You are not hired due to age category mismatch." << endl;
 		return 0; // Added a return to end the program if there is a mismatch with the requirements.
 	}
 
@@ -21,7 +21,7 @@ int main() {
 	cin >> exp;
 
 	if (exp < min_exp) {
-		cout << "You are not accepted for the job." << endl;
+		cout << "You are not hired due to insufficient work experience" << endl;
 		return 0;
 	}
 
